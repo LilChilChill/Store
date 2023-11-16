@@ -32,31 +32,31 @@ const BottomNavigator = () =>{
         <Tap.Screen 
             name='Home' 
             component={Home} 
-            options={{tabBarIcon:({focused})=> <Ionicons name='home-outline' size={24} color={focused ? COLORS.blue : COLORS.dark} />
+            options={{tabBarIcon:({focused})=> <Ionicons name='home-outline' size={24} color={focused ? COLORS.theme : COLORS.dark} />
 
         }}/>
             <Tap.Screen 
                 name='Notifi' 
                 component={Notifi} 
-                options={{tabBarIcon:({focused})=> <Ionicons name='notifications-outline' size={24} color={focused ? COLORS.blue : COLORS.dark} />
+                options={{tabBarIcon:({focused})=> <Ionicons name='notifications-outline' size={24} color={focused ? COLORS.theme : COLORS.dark} />
 
             }}/>
             <Tap.Screen 
                 name='Scan' 
                 component={Scan} 
-                options={{tabBarIcon:({focused})=> <Ionicons name='scan-outline' size={24} color={focused ? COLORS.blue : COLORS.dark} />
+                options={{tabBarIcon:({focused})=> <Ionicons name='scan-outline' size={24} color={focused ? COLORS.theme : COLORS.dark} />
 
             }}/>
             <Tap.Screen 
                 name='Time' 
                 component={Time } 
-                options={{tabBarIcon:({focused})=> <Ionicons name='time-outline' size={24} color={focused ? COLORS.blue : COLORS.dark} />
+                options={{tabBarIcon:({focused})=> <Ionicons name='time-outline' size={24} color={focused ? COLORS.theme : COLORS.dark} />
 
             }}/>
             <Tap.Screen 
                 name='Cart ' 
                 component={Cart} 
-                options={{tabBarIcon:({focused})=> <Ionicons name='cart-outline' size={24} color={focused ? COLORS.blue : COLORS.dark} />
+                options={{tabBarIcon:({focused})=> <Ionicons name='cart-outline' size={24} color={focused ? COLORS.theme : COLORS.dark} />
 
             }}/>
         </Tap.Navigator>
