@@ -1,11 +1,11 @@
-import { StyleSheet, Text, View, SafeAreaView, Image, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, SafeAreaView, Image, TouchableOpacity, ScrollView } from 'react-native'
 import React from 'react'
 import { Ionicons } from '@expo/vector-icons'
 import COLORS from '../const/colors'
 
 const Home = () => {
   return (
-    <SafeAreaView style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={styles.header}>
         <Text >
             <Text style={{fontSize: 22, fontWeight: 'bold' }}>
@@ -30,7 +30,7 @@ const Home = () => {
       </View>
 
       <SafeAreaView horizontal={true} style={styles.itemContainer}>
-        <View style={styles.box}>
+        <TouchableOpacity style={styles.box}>
         <View style={{flexDirection: 'column',}}> 
                 <TouchableOpacity>
                     <Image source={require('../asset/scan.png')} />
@@ -44,9 +44,9 @@ const Home = () => {
                     Scanned 483
                 </Text>
             </View>
-        </View>
+        </TouchableOpacity>
 
-        <View style={styles.box}>
+        <TouchableOpacity style={styles.box}>
         <View style={{flexDirection: 'row', }}> 
                 <TouchableOpacity>
                     <View style={{backgroundColor: "#F6E3DB", padding: 15, borderRadius: 10,}}> 
@@ -62,11 +62,11 @@ const Home = () => {
                     Counterfeited 32
                 </Text>
             </View>
-        </View>
+        </TouchableOpacity>
       </SafeAreaView>
 
       <SafeAreaView horizontal={true} style={styles.itemContainer}>
-        <View style={styles.box}>
+        <TouchableOpacity style={styles.box}>
         <View style={{flexDirection: 'row', }}> 
                 <TouchableOpacity>
                     <View style={{backgroundColor: "#D8F3F1", padding: 15, borderRadius: 10,}}> 
@@ -82,9 +82,9 @@ const Home = () => {
                     Checkouts 8
                 </Text>
             </View>
-        </View>
+        </TouchableOpacity>
 
-        <View style={styles.box}>
+        <TouchableOpacity style={styles.box}>
         <View style={{flexDirection: 'row', }}> 
                 <TouchableOpacity>
                     <View style={{backgroundColor: "#D0EDFB", padding: 15, borderRadius: 10,}}> 
@@ -100,20 +100,22 @@ const Home = () => {
                     History 26
                 </Text>
             </View>
-        </View>
+        </TouchableOpacity>
       </SafeAreaView>
 
       <View style={styles.header}>
         <Text style={{fontSize: 22}}>
          Explore More 
         </Text>
-        <View style={styles.imageHeader}>
+        <TouchableOpacity style={styles.imageHeader}>
             <Ionicons name='arrow-forward-outline' size={24} />
-        </View>
+        </TouchableOpacity>
       </View>
 
+      
+
             
-    </SafeAreaView>
+    </ScrollView>
   )
 }
 
@@ -146,4 +148,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         borderColor: "#E2E2E2"
     },
+    footer:{
+        marginBottom: 100
+    }
 })

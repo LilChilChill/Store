@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, SafeAreaView, Image, TouchableOpacity } from 'r
 import React from 'react'
 import { Ionicons } from '@expo/vector-icons'
 
-const Cart = () => {
+const Cart = ({navigation}) => {
   return (
     <SafeAreaView styles={styles.container}>  
       <View >
@@ -146,7 +146,7 @@ const Cart = () => {
         </Text>
       </View>
 
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Check out")} >
         <Text style={styles.buttonText}>
           Process to checkout
         </Text>
